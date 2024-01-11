@@ -1,0 +1,14 @@
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.AssemblyInfoInputs.cache
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.AssemblyInfo.cs
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.csproj.CoreCompileInputs.cache
+D:\workspace\2401Work\240111\codetaka\codetaka\bin\Debug\net8.0\codetaka.exe
+D:\workspace\2401Work\240111\codetaka\codetaka\bin\Debug\net8.0\codetaka.deps.json
+D:\workspace\2401Work\240111\codetaka\codetaka\bin\Debug\net8.0\codetaka.runtimeconfig.json
+D:\workspace\2401Work\240111\codetaka\codetaka\bin\Debug\net8.0\codetaka.dll
+D:\workspace\2401Work\240111\codetaka\codetaka\bin\Debug\net8.0\codetaka.pdb
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.dll
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\refint\codetaka.dll
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.pdb
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\codetaka.genruntimeconfig.cache
+D:\workspace\2401Work\240111\codetaka\codetaka\obj\Debug\net8.0\ref\codetaka.dll
