@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\2401Work\\240111\\codetaka\\codetaka\\codetaka.csproj",
+      "projectUniqueName": "D:\\workspace\\Codetaka\\choney\\codetaka\\codetaka\\codetaka.csproj",
       "projectName": "codetaka",
-      "projectPath": "D:\\workspace\\2401Work\\240111\\codetaka\\codetaka\\codetaka.csproj",
+      "projectPath": "D:\\workspace\\Codetaka\\choney\\codetaka\\codetaka\\codetaka.csproj",
       "packagesPath": "C:\\Users\\ansru\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\2401Work\\240111\\codetaka\\codetaka\\obj\\",
+      "outputPath": "D:\\workspace\\Codetaka\\choney\\codetaka\\codetaka\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ansru\\AppData\\Roaming\\NuGet\\NuGet.Config",

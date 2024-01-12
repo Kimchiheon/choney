@@ -18,3 +18,17 @@ public class Solution
         return answer;
     }
 }
+
+public class Solution2
+{
+    public int solution(int n)
+    {
+        int answer = 0;
+        do
+        {
+            answer += n % 10;
+            n /= 10;
+        } while (n > 0);
+        return answer;
+    }
+}
