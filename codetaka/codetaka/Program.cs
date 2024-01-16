@@ -46,3 +46,22 @@ public class Solution3
         return answer;
     }
 }
+
+
+public class Solution4
+{
+    public int solution(int n)
+    {
+        int answer = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (n % (n - i) == 1)
+            {
+                answer = n - i;
+            }
+
+        }
+
+        return answer;
+    }
+}
