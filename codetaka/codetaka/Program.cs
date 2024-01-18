@@ -78,3 +78,21 @@ public class Solution5
         return answer;
     }
 }
+
+public class Solution6
+{
+    public int[] solution(long n)
+    {
+        int count = 0;
+        long temp = 0;
+        int[] answer = new int[] { };
+        while (true)
+        {
+            answer[count] = (int)n % 10;
+            temp = n / 10;
+            count++;
+            if (temp < 10) break;
+        }
+        return answer;
+    }
+}
