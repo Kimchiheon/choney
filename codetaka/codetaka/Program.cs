@@ -96,3 +96,15 @@ public class Solution6
         return answer;
     }
 }
+
+public class Solution7
+{
+    public int solution(string s)
+    {
+        bool isNum = false;
+        int answer = 0;
+        isNum = int.TryParse(s, out answer);
+
+        return answer;
+    }
+}
