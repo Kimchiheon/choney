@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 
 //int[] numbers = { 1, 2, 3, 4, 5, 6 };
@@ -110,27 +111,33 @@
 //}
 
 
-public class Solution
-{
-    public long solution(long n)
-    {
-        long x = (int)n / 2;
-        while (true)
-        {
-            if (x * x == n) return (x + 1) * (x + 1);
-            if (x * x > n) x = (int)x / 2;
-            if (x * x < n)
-            {
-                x++;
-                if (x * x > n) return -1;
+//public class Solution
+//{
+//    public long solution(long n)
+//    {
+//        long x = (int)n / 2;
+//        while (true)
+//        {
+//            if (x * x == n) return (x + 1) * (x + 1);
+//            if (x * x > n) x = (int)x / 2;
+//            if (x * x < n)
+//            {
+//                x++;
+//                if (x * x > n) return -1;
 
 
-            }
-        }
+//            }
+//        }
 
 
-    }
+//    }
 
-}
+//}
 
+long i = 876652498;
+string str = i.ToString();
+char[] chars = str.ToCharArray();
+char[] sort = chars.OrderByDescending(x => x).ToArray();
+long answer = long.Parse(sort);
+Console.WriteLine(answer);
 
