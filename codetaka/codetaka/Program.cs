@@ -134,10 +134,30 @@ using System.Linq;
 
 //}
 
-long i = 876652498;
-string str = i.ToString();
-char[] chars = str.ToCharArray();
-char[] sort = chars.OrderByDescending(x => x).ToArray();
-long answer = long.Parse(sort);
-Console.WriteLine(answer);
+//long i = 876652498;
+//string str = i.ToString();
+//char[] chars = str.ToCharArray();
+//char[] sort = chars.OrderByDescending(x => x).ToArray();
+//long answer = long.Parse(sort);
+//Console.WriteLine(answer);
+
+
+//public class Solution
+//{
+//    public bool solution(int x)
+//    {
+//        bool answer = true;
+//        int number = 0;
+//        char zero = '0';
+//        string str = x.ToString();
+//        char[] chars = str.ToCharArray();
+//        for (int i = 0; i < chars.Length; i++)
+//        {
+//            number += (chars[i] - zero);
+//        }
+//        if (x % number == 0) answer = true;
+//        else answer = false;
+//        return answer;
+//    }
+//}
 
