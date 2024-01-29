@@ -186,4 +186,22 @@ using System.Linq;
 //    }
 //}
 
+public class Solution
+{
+    public int solution(int num)
+    {
+        long answer = num;
+        int temp = 0;
+        for (int i = 0; i < 500; i++)
+        {
+            if (answer == 1) return temp;
+            if (answer % 2 == 0) answer /= 2;
+            else { answer = (answer * 3) + 1; }
+            temp++;
+
+        }
+        return -1;
+    }
+}
+
 
