@@ -186,22 +186,42 @@ using System.Linq;
 //    }
 //}
 
+//public class Solution
+//{
+//    public int solution(int num)
+//    {
+//        long answer = num;
+//        int temp = 0;
+//        for (int i = 0; i < 500; i++)
+//        {
+//            if (answer == 1) return temp;
+//            if (answer % 2 == 0) answer /= 2;
+//            else { answer = (answer * 3) + 1; }
+//            temp++;
+
+//        }
+//        return -1;
+//    }
+//}
+
+
 public class Solution
 {
-    public int solution(int num)
+    public string solution(string[] seoul)
     {
-        long answer = num;
-        int temp = 0;
-        for (int i = 0; i < 500; i++)
+        string answer = "";
+        string temp = "";
+        for (int i = 0; i < seoul.Length; i++)
         {
-            if (answer == 1) return temp;
-            if (answer % 2 == 0) answer /= 2;
-            else { answer = (answer * 3) + 1; }
-            temp++;
-
+            if (seoul[i] == "Kim")
+            {
+                answer = $"김서방은 {i}에 있다";
+                return answer;
+            }
         }
-        return -1;
+        return answer;
     }
 }
+
 
 
