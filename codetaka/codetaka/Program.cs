@@ -205,20 +205,37 @@ using System.Linq;
 //}
 
 
+//public class Solution
+//{
+//    public string solution(string[] seoul)
+//    {
+//        string answer = "";
+//        string temp = "";
+//        for (int i = 0; i < seoul.Length; i++)
+//        {
+//            if (seoul[i] == "Kim")
+//            {
+//                answer = $"김서방은 {i}에 있다";
+//                return answer;
+//            }
+//        }
+//        return answer;
+//    }
+//}
+
+using System;
+
 public class Solution
 {
-    public string solution(string[] seoul)
+    public int solution(int[] absolutes, bool[] signs)
     {
-        string answer = "";
-        string temp = "";
-        for (int i = 0; i < seoul.Length; i++)
+        int answer = 0;
+        for (int i = 0; i < absolutes.Length; i++)
         {
-            if (seoul[i] == "Kim")
-            {
-                answer = $"김서방은 {i}에 있다";
-                return answer;
-            }
+            if (signs[i]) answer += absolutes[i];
+            else answer -= absolutes[i];
         }
+
         return answer;
     }
 }
