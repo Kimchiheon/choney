@@ -223,19 +223,35 @@ using System.Linq;
 //    }
 //}
 
-using System;
+//using System;
+
+//public class Solution
+//{
+//    public int solution(int[] absolutes, bool[] signs)
+//    {
+//        int answer = 0;
+//        for (int i = 0; i < absolutes.Length; i++)
+//        {
+//            if (signs[i]) answer += absolutes[i];
+//            else answer -= absolutes[i];
+//        }
+
+//        return answer;
+//    }
+//}
 
 public class Solution
 {
-    public int solution(int[] absolutes, bool[] signs)
+    public string solution(string phone_number)
     {
-        int answer = 0;
-        for (int i = 0; i < absolutes.Length; i++)
+        char[] chars = phone_number.ToCharArray();
+        int number = chars.Length;
+        for (int i = 0; i < number - 4; i++)
         {
-            if (signs[i]) answer += absolutes[i];
-            else answer -= absolutes[i];
+            chars[i] = '*';
         }
 
+        string answer = new string(chars);
         return answer;
     }
 }
