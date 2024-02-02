@@ -240,21 +240,36 @@ using System.Linq;
 //    }
 //}
 
+//public class Solution
+//{
+//    public string solution(string phone_number)
+//    {
+//        char[] chars = phone_number.ToCharArray();
+//        int number = chars.Length;
+//        for (int i = 0; i < number - 4; i++)
+//        {
+//            chars[i] = '*';
+//        }
+
+//        string answer = new string(chars);
+//        return answer;
+//    }
+//}
+using System;
+
 public class Solution
 {
-    public string solution(string phone_number)
+    public int solution(int[] numbers)
     {
-        char[] chars = phone_number.ToCharArray();
-        int number = chars.Length;
-        for (int i = 0; i < number - 4; i++)
+        int temp = 0;
+        int answer = -1;
+        for (int i = 0; i < numbers.Length; i++)
         {
-            chars[i] = '*';
+            temp += numbers[i];
         }
-
-        string answer = new string(chars);
+        answer = 45 - temp;
         return answer;
     }
 }
-
 
 
