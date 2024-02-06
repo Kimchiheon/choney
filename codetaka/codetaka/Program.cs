@@ -255,21 +255,42 @@ using System.Linq;
 //        return answer;
 //    }
 //}
-using System;
+//using System;
+
+//public class Solution
+//{
+//    public int solution(int[] numbers)
+//    {
+//        int temp = 0;
+//        int answer = -1;
+//        for (int i = 0; i < numbers.Length; i++)
+//        {
+//            temp += numbers[i];
+//        }
+//        answer = 45 - temp;
+//        return answer;
+//    }
+//}
+
+
+using System.Linq;
 
 public class Solution
 {
-    public int solution(int[] numbers)
+    public string solution(string s)
     {
-        int temp = 0;
-        int answer = -1;
-        for (int i = 0; i < numbers.Length; i++)
+        string answer = "";
+        char[] array = s.ToArray();
+        if (array.Length % 2 == 0)
         {
-            temp += numbers[i];
+            string temp = array[array.Length / 2 - 1].ToString() + array[(array.Length / 2)].ToString();
+            answer = temp;
         }
-        answer = 45 - temp;
+        else
+        {
+            string temp = array[(array.Length / 2)].ToString();
+            answer = temp;
+        }
         return answer;
     }
 }
-
-
