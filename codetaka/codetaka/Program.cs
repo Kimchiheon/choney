@@ -273,24 +273,39 @@ using System.Linq;
 //}
 
 
-using System.Linq;
+//using System.Linq;
+
+//public class Solution
+//{
+//    public string solution(string s)
+//    {
+//        string answer = "";
+//        char[] array = s.ToArray();
+//        if (array.Length % 2 == 0)
+//        {
+//            string temp = array[array.Length / 2 - 1].ToString() + array[(array.Length / 2)].ToString();
+//            answer = temp;
+//        }
+//        else
+//        {
+//            string temp = array[(array.Length / 2)].ToString();
+//            answer = temp;
+//        }
+//        return answer;
+//    }
+//}
 
 public class Solution
 {
-    public string solution(string s)
+    public string solution(int n)
     {
         string answer = "";
-        char[] array = s.ToArray();
-        if (array.Length % 2 == 0)
+        for (int i = 0; i < n; i++)
         {
-            string temp = array[array.Length / 2 - 1].ToString() + array[(array.Length / 2)].ToString();
-            answer = temp;
+            if (i % 2 == 0) answer += "수";
+            if (i % 2 == 1) answer += "박";
         }
-        else
-        {
-            string temp = array[(array.Length / 2)].ToString();
-            answer = temp;
-        }
+
         return answer;
     }
 }
