@@ -295,17 +295,32 @@ using System.Linq;
 //    }
 //}
 
+//public class Solution
+//{
+//    public string solution(int n)
+//    {
+//        string answer = "";
+//        for (int i = 0; i < n; i++)
+//        {
+//            if (i % 2 == 0) answer += "수";
+//            if (i % 2 == 1) answer += "박";
+//        }
+
+//        return answer;
+//    }
+//}
+
+using System;
+
 public class Solution
 {
-    public string solution(int n)
+    public int solution(int[] a, int[] b)
     {
-        string answer = "";
-        for (int i = 0; i < n; i++)
+        int answer = 0;
+        for (int i = 0; i < a.Length; i++)
         {
-            if (i % 2 == 0) answer += "수";
-            if (i % 2 == 1) answer += "박";
+            answer += a[i] * b[i];
         }
-
         return answer;
     }
 }
