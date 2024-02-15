@@ -310,16 +310,34 @@ using System.Linq;
 //    }
 //}
 
+//using System;
+
+//public class Solution
+//{
+//    public int solution(int[] a, int[] b)
+//    {
+//        int answer = 0;
+//        for (int i = 0; i < a.Length; i++)
+//        {
+//            answer += a[i] * b[i];
+//        }
+//        return answer;
+//    }
+//}
+
 using System;
 
 public class Solution
 {
-    public int solution(int[] a, int[] b)
+    public int solution(int left, int right)
     {
         int answer = 0;
-        for (int i = 0; i < a.Length; i++)
+        for (int i = left; i <= right; i++)
         {
-            answer += a[i] * b[i];
+            int temp = i;
+            float rooti = MathF.Sqrt(i);
+            if (rooti % 1 == 0) temp *= -1;
+            answer += temp;
         }
         return answer;
     }
