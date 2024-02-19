@@ -325,20 +325,35 @@ using System.Linq;
 //    }
 //}
 
-using System;
+//using System;
+
+//public class Solution
+//{
+//    public int solution(int left, int right)
+//    {
+//        int answer = 0;
+//        for (int i = left; i <= right; i++)
+//        {
+//            int temp = i;
+//            float rooti = MathF.Sqrt(i);
+//            if (rooti % 1 == 0) temp *= -1;
+//            answer += temp;
+//        }
+//        return answer;
+//    }
+//}
+
+using System.Linq;
 
 public class Solution
 {
-    public int solution(int left, int right)
+    public string solution(string s)
     {
-        int answer = 0;
-        for (int i = left; i <= right; i++)
-        {
-            int temp = i;
-            float rooti = MathF.Sqrt(i);
-            if (rooti % 1 == 0) temp *= -1;
-            answer += temp;
-        }
+        string answer = "";
+        char[] chars = s.ToCharArray();
+        char[] sortArray = sortArray = chars.OrderByDescending(n => n).ToArray();
+        answer = new string(sortArray);
+
         return answer;
     }
 }
