@@ -343,17 +343,48 @@ using System.Linq;
 //    }
 //}
 
-using System.Linq;
+//using System.Linq;
 
-public class Solution
+//public class Solution
+//{
+//    public string solution(string s)
+//    {
+//        string answer = "";
+//        char[] chars = s.ToCharArray();
+//        char[] sortArray = sortArray = chars.OrderByDescending(n => n).ToArray();
+//        answer = new string(sortArray);
+
+//        return answer;
+//    }
+//}
+
+using System;
+
+class Solution
 {
-    public string solution(string s)
+    public long solution(int price, int money, int count)
     {
-        string answer = "";
-        char[] chars = s.ToCharArray();
-        char[] sortArray = sortArray = chars.OrderByDescending(n => n).ToArray();
-        answer = new string(sortArray);
+        long curPrice = price;
+        long sum = 0;
+        long answer = 0;
 
-        return answer;
+        for (int i = 1; i <= count; i++)
+        {
+            curPrice = price * i;
+            //if (curPrice >= 2500)
+            //{
+            //    curPrice = 2500;
+            //}
+            sum += curPrice;
+        }
+        answer = sum - money;
+        if (money > sum) { return 0; }
+        else return answer;
     }
+
+
+
 }
+
+
+
