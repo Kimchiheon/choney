@@ -358,33 +358,49 @@ using System.Linq;
 //    }
 //}
 
+//using System;
+
+//class Solution
+//{
+//    public long solution(int price, int money, int count)
+//    {
+//        long curPrice = price;
+//        long sum = 0;
+//        long answer = 0;
+
+//        for (int i = 1; i <= count; i++)
+//        {
+//            curPrice = price * i;
+//            //if (curPrice >= 2500)
+//            //{
+//            //    curPrice = 2500;
+//            //}
+//            sum += curPrice;
+//        }
+//        answer = sum - money;
+//        if (money > sum) { return 0; }
+//        else return answer;
+//    }
+//}
+using System.Linq;
 using System;
 
-class Solution
+
+public class Solution
 {
-    public long solution(int price, int money, int count)
+    public bool solution(string s)
     {
-        long curPrice = price;
-        long sum = 0;
-        long answer = 0;
+        char[] chars = s.ToArray();
+        int number;
+        bool answer = true;
+        if (!(chars.Length == 4 || chars.Length == 6)) return false;
+        answer = int.TryParse(s, out number);
 
-        for (int i = 1; i <= count; i++)
-        {
-            curPrice = price * i;
-            //if (curPrice >= 2500)
-            //{
-            //    curPrice = 2500;
-            //}
-            sum += curPrice;
-        }
-        answer = sum - money;
-        if (money > sum) { return 0; }
-        else return answer;
+        return answer;
     }
-
-
-
 }
+
+
 
 
 
