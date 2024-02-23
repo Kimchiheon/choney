@@ -382,24 +382,39 @@ using System.Linq;
 //        else return answer;
 //    }
 //}
-using System.Linq;
-using System;
+//using System.Linq;
+//using System;
 
 
+//public class Solution
+//{
+//    public bool solution(string s)
+//    {
+//        char[] chars = s.ToArray();
+//        int number;
+//        bool answer = true;
+//        if (!(chars.Length == 4 || chars.Length == 6)) return false;
+//        answer = int.TryParse(s, out number);
+
+//        return answer;
+//    }
+//}
 public class Solution
 {
-    public bool solution(string s)
+    public int[,] solution(int[,] arr1, int[,] arr2)
     {
-        char[] chars = s.ToArray();
-        int number;
-        bool answer = true;
-        if (!(chars.Length == 4 || chars.Length == 6)) return false;
-        answer = int.TryParse(s, out number);
+        int[,] answer = new int[arr1.GetLength(0), arr1.GetLength(1)];
+        for (int i = 0; i < arr1.GetLength(0); i++)
+        {
+            for (int j = 0; j < arr1.GetLength(1); j++)
+            {
+                answer[i, j] = arr1[i, j] + arr2[i, j];
+            }
 
+        }
         return answer;
     }
 }
-
 
 
 
