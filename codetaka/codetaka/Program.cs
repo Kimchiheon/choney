@@ -399,20 +399,45 @@ using System.Linq;
 //        return answer;
 //    }
 //}
-public class Solution
-{
-    public int[,] solution(int[,] arr1, int[,] arr2)
-    {
-        int[,] answer = new int[arr1.GetLength(0), arr1.GetLength(1)];
-        for (int i = 0; i < arr1.GetLength(0); i++)
-        {
-            for (int j = 0; j < arr1.GetLength(1); j++)
-            {
-                answer[i, j] = arr1[i, j] + arr2[i, j];
-            }
+//public class Solution
+//{
+//    public int[,] solution(int[,] arr1, int[,] arr2)
+//    {
+//        int[,] answer = new int[arr1.GetLength(0), arr1.GetLength(1)];
+//        for (int i = 0; i < arr1.GetLength(0); i++)
+//        {
+//            for (int j = 0; j < arr1.GetLength(1); j++)
+//            {
+//                answer[i, j] = arr1[i, j] + arr2[i, j];
+//            }
 
+//        }
+//        return answer;
+//    }
+//}
+
+using System;
+
+public class Example
+{
+    public static void Main()
+    {
+        String[] s;
+
+        Console.Clear();
+        s = Console.ReadLine().Split(' ');
+
+        int a = Int32.Parse(s[0]);
+        int b = Int32.Parse(s[1]);
+        for (int j = 0; j < b; j++)
+        {
+            for (int i = 0; i < a; i++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
         }
-        return answer;
+
     }
 }
 
