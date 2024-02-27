@@ -416,31 +416,64 @@ using System.Linq;
 //    }
 //}
 
-using System;
+//using System;
 
-public class Example
+//public class Example
+//{
+//    public static void Main()
+//    {
+//        String[] s;
+
+//        Console.Clear();
+//        s = Console.ReadLine().Split(' ');
+
+//        int a = Int32.Parse(s[0]);
+//        int b = Int32.Parse(s[1]);
+//        for (int j = 0; j < b; j++)
+//        {
+//            for (int i = 0; i < a; i++)
+//            {
+//                Console.Write("*");
+//            }
+//            Console.WriteLine();
+//        }
+
+//    }
+//}
+
+public class Solution
 {
-    public static void Main()
+    public int[] solution(int n, int m)
     {
-        String[] s;
-
-        Console.Clear();
-        s = Console.ReadLine().Split(' ');
-
-        int a = Int32.Parse(s[0]);
-        int b = Int32.Parse(s[1]);
-        for (int j = 0; j < b; j++)
+        int[] answer = new int[2];
+        int[] quotient = new int[2];
+        bool isDiv = false;
+        answer[0] = 1;
+        quotient[0] = n;
+        quotient[1] = m;
+        do
         {
-            for (int i = 0; i < a; i++)
+            int divNum = 2;
+            isDiv = false;
+            while (!isDiv)
             {
-                Console.Write("*");
+                if (divNum > quotient[0] || divNum > quotient[1])
+                {
+                    answer[1] = answer[0] * quotient[0] * quotient[1];
+                    return answer;
+                }
+                if (quotient[0] % divNum == 0 && quotient[1] % divNum == 0)
+                {
+                    quotient[0] /= divNum;
+                    quotient[1] /= divNum;
+                    answer[0] *= divNum;
+                    isDiv = true;
+                }
+                divNum++;
             }
-            Console.WriteLine();
         }
-
+        while (true);
     }
 }
-
-
 
 
