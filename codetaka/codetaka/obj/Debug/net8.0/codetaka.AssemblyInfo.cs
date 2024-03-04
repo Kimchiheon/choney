@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("codetaka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f199c7f91e7da84245637c3f89373cf153878dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ec988020c74f11c0eb4a10c76b224fdeebdec6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("codetaka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("codetaka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

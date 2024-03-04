@@ -441,39 +441,83 @@ using System.Linq;
 //    }
 //}
 
+//public class Solution
+//{
+//    public int[] solution(int n, int m)
+//    {
+//        int[] answer = new int[2];
+//        int[] quotient = new int[2];
+//        bool isDiv = false;
+//        answer[0] = 1;
+//        quotient[0] = n;
+//        quotient[1] = m;
+//        do
+//        {
+//            int divNum = 2;
+//            isDiv = false;
+//            while (!isDiv)
+//            {
+//                if (divNum > quotient[0] || divNum > quotient[1])
+//                {
+//                    answer[1] = answer[0] * quotient[0] * quotient[1];
+//                    return answer;
+//                }
+//                if (quotient[0] % divNum == 0 && quotient[1] % divNum == 0)
+//                {
+//                    quotient[0] /= divNum;
+//                    quotient[1] /= divNum;
+//                    answer[0] *= divNum;
+//                    isDiv = true;
+//                }
+//                divNum++;
+//            }
+//        }
+//        while (true);
+//    }
+//}
+
+using System;
+using System.Collections.Generic;
+
+
 public class Solution
 {
-    public int[] solution(int n, int m)
+    public string solution(string s)
     {
-        int[] answer = new int[2];
-        int[] quotient = new int[2];
-        bool isDiv = false;
-        answer[0] = 1;
-        quotient[0] = n;
-        quotient[1] = m;
-        do
+        string answer = "";
+        char[] chars = s.ToCharArray();
+        int count = 0;
+        for (int i = 0; i < chars.Length; i++)
         {
-            int divNum = 2;
-            isDiv = false;
-            while (!isDiv)
+            switch (chars[i])
             {
-                if (divNum > quotient[0] || divNum > quotient[1])
-                {
-                    answer[1] = answer[0] * quotient[0] * quotient[1];
-                    return answer;
-                }
-                if (quotient[0] % divNum == 0 && quotient[1] % divNum == 0)
-                {
-                    quotient[0] /= divNum;
-                    quotient[1] /= divNum;
-                    answer[0] *= divNum;
-                    isDiv = true;
-                }
-                divNum++;
+                case ' ':
+                    count = 0;
+                    break;
+                default:
+                    if (count % 2 == 0)
+                    {
+                        chars[i] = char.ToUpper(chars[i]);
+                        count++;
+                    }
+                    else
+                    {
+                        chars[i] = char.ToLower(chars[i]);
+                        count++;
+                    }
+                    break;
             }
+
         }
-        while (true);
+        answer = new string(chars);
+        return answer;
     }
 }
+
+
+
+
+
+
 
 
