@@ -476,43 +476,78 @@ using System.Linq;
 //    }
 //}
 
+//using System;
+//using System.Collections.Generic;
+
+
+//public class Solution
+//{
+//    public string solution(string s)
+//    {
+//        string answer = "";
+//        char[] chars = s.ToCharArray();
+//        int count = 0;
+//        for (int i = 0; i < chars.Length; i++)
+//        {
+//            switch (chars[i])
+//            {
+//                case ' ':
+//                    count = 0;
+//                    break;
+//                default:
+//                    if (count % 2 == 0)
+//                    {
+//                        chars[i] = char.ToUpper(chars[i]);
+//                        count++;
+//                    }
+//                    else
+//                    {
+//                        chars[i] = char.ToLower(chars[i]);
+//                        count++;
+//                    }
+//                    break;
+//            }
+
+//        }
+//        answer = new string(chars);
+//        return answer;
+//    }
+//}
+
 using System;
 using System.Collections.Generic;
 
 
 public class Solution
 {
-    public string solution(string s)
+    public int solution(int[] number)
     {
-        string answer = "";
-        char[] chars = s.ToCharArray();
+        int sum = 0;
         int count = 0;
-        for (int i = 0; i < chars.Length; i++)
-        {
-            switch (chars[i])
-            {
-                case ' ':
-                    count = 0;
-                    break;
-                default:
-                    if (count % 2 == 0)
-                    {
-                        chars[i] = char.ToUpper(chars[i]);
-                        count++;
-                    }
-                    else
-                    {
-                        chars[i] = char.ToLower(chars[i]);
-                        count++;
-                    }
-                    break;
-            }
 
+        for (int i = 0; i < number.Length; i++)
+        {
+            for (int j = i + 1; j < number.Length; j++)
+            {
+                for (int k = j + 1; k < number.Length; k++)
+                {
+                    sum += number[i] + number[j] + number[k];
+                    if (sum == 0)
+                    {
+                        count++;
+                    }
+                    sum = 0;
+                }
+            }
         }
-        answer = new string(chars);
-        return answer;
+
+        return count;
     }
 }
+
+
+
+
 
 
 
