@@ -514,34 +514,64 @@ using System.Linq;
 //    }
 //}
 
-using System;
-using System.Collections.Generic;
+//using System;
+//using System.Collections.Generic;
+//using System.Text;
 
 
+//public class Solution
+//{
+//    public int solution(int[] number)
+//    {
+//        int sum = 0;
+//        int count = 0;
+
+//        for (int i = 0; i < number.Length; i++)
+//        {
+//            for (int j = i + 1; j < number.Length; j++)
+//            {
+//                for (int k = j + 1; k < number.Length; k++)
+//                {
+//                    sum += number[i] + number[j] + number[k];
+//                    if (sum == 0)
+//                    {
+//                        count++;
+//                    }
+//                    sum = 0;
+//                }
+//            }
+//        }
+
+//        return count;
+//    }
+//}
+
+using System.Text;
 public class Solution
 {
-    public int solution(int[] number)
+    public int solution(string t, string p)
     {
-        int sum = 0;
-        int count = 0;
-
-        for (int i = 0; i < number.Length; i++)
+        int len = p.Length;
+        int answer = 0;
+        char[] chars = t.ToCharArray();
+        //string[] strings = new string[t.Length - len + 1];
+        StringBuilder[] stringBuilder = new StringBuilder[t.Length - len + 1];
+        for (int j = 0; j <= t.Length - len; j++)
         {
-            for (int j = i + 1; j < number.Length; j++)
+            stringBuilder[j] = new StringBuilder();
+            for (int i = 0; i < len; i++)
             {
-                for (int k = j + 1; k < number.Length; k++)
-                {
-                    sum += number[i] + number[j] + number[k];
-                    if (sum == 0)
-                    {
-                        count++;
-                    }
-                    sum = 0;
-                }
+                stringBuilder[j].Append(chars[i + j].ToString());
             }
         }
+        for (int i = 0; i < stringBuilder.Length; i++)
+        {
+            long num1 = long.Parse(stringBuilder[i].ToString());
+            long num2 = long.Parse(p);
+            if (num1 <= num2) answer++;
+        }
 
-        return count;
+        return answer;
     }
 }
 
