@@ -546,31 +546,62 @@ using System.Linq;
 //    }
 //}
 
-using System.Text;
+//using System.Text;
+//public class Solution
+//{
+//    public int solution(string t, string p)
+//    {
+//        int len = p.Length;
+//        int answer = 0;
+//        char[] chars = t.ToCharArray();
+//        //string[] strings = new string[t.Length - len + 1];
+//        StringBuilder[] stringBuilder = new StringBuilder[t.Length - len + 1];
+//        for (int j = 0; j <= t.Length - len; j++)
+//        {
+//            stringBuilder[j] = new StringBuilder();
+//            for (int i = 0; i < len; i++)
+//            {
+//                stringBuilder[j].Append(chars[i + j].ToString());
+//            }
+//        }
+//        for (int i = 0; i < stringBuilder.Length; i++)
+//        {
+//            long num1 = long.Parse(stringBuilder[i].ToString());
+//            long num2 = long.Parse(p);
+//            if (num1 <= num2) answer++;
+//        }
+
+//        return answer;
+//    }
+//}
+
+using System;
 public class Solution
 {
-    public int solution(string t, string p)
+    public string solution(string s, int n)
     {
-        int len = p.Length;
-        int answer = 0;
-        char[] chars = t.ToCharArray();
-        //string[] strings = new string[t.Length - len + 1];
-        StringBuilder[] stringBuilder = new StringBuilder[t.Length - len + 1];
-        for (int j = 0; j <= t.Length - len; j++)
+        string answer = "";
+        char[] chars = s.ToCharArray();
+        int space = ' ';
+        for (int i = 0; i < s.Length; i++)
         {
-            stringBuilder[j] = new StringBuilder();
-            for (int i = 0; i < len; i++)
+            if (chars[i] == space) { answer += chars[i]; }
+            else
             {
-                stringBuilder[j].Append(chars[i + j].ToString());
+                if (chars[i] >= 65 && chars[i] <= 90)
+                {
+                    int temp = (chars[i] - 65 + n) % 26 + 65;
+                    chars[i] = (char)temp;
+                }
+                if (chars[i] >= 97 && chars[i] <= 122)
+                {
+                    int temp = (chars[i] - 97 + n) % 26 + 97;
+                    chars[i] = (char)temp;
+                }
+                answer += chars[i];
             }
-        }
-        for (int i = 0; i < stringBuilder.Length; i++)
-        {
-            long num1 = long.Parse(stringBuilder[i].ToString());
-            long num2 = long.Parse(p);
-            if (num1 <= num2) answer++;
-        }
 
+        }
         return answer;
     }
 }
